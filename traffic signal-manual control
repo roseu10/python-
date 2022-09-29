@@ -1,0 +1,39 @@
+from tkinter import *
+
+def red():
+    
+       canvas1.create_oval(120,120,50,50,fill='red',outline='light grey',width=4)
+       canvas2.create_oval(120,120,50,50,fill='white',outline='light grey',width=4)
+       canvas3.create_oval(120,120,50,50,fill='white',outline='light grey',width=4)
+
+def orange():
+       canvas1.create_oval(120,120,50,50,fill='white',outline='light grey',width=4)
+       canvas2.create_oval(120,120,50,50,fill='orange',outline='light grey',width=4)
+       canvas3.create_oval(120,120,50,50,fill='white',outline='light grey',width=4)
+
+def green():
+       canvas1.create_oval(120,120,50,50,fill='white',outline='light grey',width=4)
+       canvas2.create_oval(120,120,50,50,fill='white',outline='light grey',width=4)
+       canvas3.create_oval(120,120,50,50,fill='green',outline='light grey',width=4)
+
+sig=Tk()
+sig.geometry('300x400')
+sig.title('Traffic Signal-Manual')
+sig.configure(bg='grey')
+
+button1=Button(sig,text='RED',font=('timesnewroman',13),bg='lightgrey',height='1',width='12',command=red)
+button1.grid(row=1,column=1)
+canvas1=Canvas(sig,height=130,bg='black')
+canvas1.grid(row=1,column=2)
+
+button2=Button(sig,text='ORANGE',font=('timesnewroman',13),bg='lightgrey',height='1',width='12',command=orange)
+button2.grid(row=2,column=1)
+canvas2=Canvas(sig,height=130,bg='black')
+canvas2.grid(row=2,column=2)
+
+button3=Button(sig,text='GREEN',font=('timesnewroman',13),bg='lightgrey',height='1',width='12',command=green)
+button3.grid(row=3,column=1)
+canvas3=Canvas(sig,height=130,bg='black')
+canvas3.grid(row=3,column=2)
+
+sig.mainloop()
